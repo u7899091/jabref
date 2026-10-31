@@ -307,7 +307,7 @@ class ArXivFetcherTest implements SearchBasedFetcherCapabilityTest, PagedSearchF
     @Test
     void searchEntryByPartOfTitleWithAcuteAccent() throws FetcherException {
         BibEntry expected = new BibEntry(sliceTheoremPaper)
-                .withCitationKey("https://doi.org/10.48550/arxiv.1405.2249");
+                .withCitationKey("Diez:2013fdp");
 
         assertEquals(List.of(expected),
                 fetcher.performSearch("title=\"slice theorem for Fréchet\""));

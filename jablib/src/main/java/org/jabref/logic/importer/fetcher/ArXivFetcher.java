@@ -356,6 +356,7 @@ public class ArXivFetcher implements FulltextFetcher, PagedSearchBasedFetcher, I
                                                                                .map(bibEntry ->
                                                                                        CompletableFuture.supplyAsync(() -> {
                                                                                            this.inplaceAsyncInfuseArXivWithDoi(bibEntry);
+                                                                                           this.infuseWithInspireCitationKeyIfMissing(bibEntry);
                                                                                            return bibEntry;
                                                                                        }, executor))
                                                                                .toList();
